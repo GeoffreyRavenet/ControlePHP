@@ -12,7 +12,9 @@ function verifInfo(){
                     echo "Vous devez rempire le champ mot de passe";
                 }
                 else{
-                stockAdmin($_POST['id'],$_POST['mdp']);
+		    if(isset($_POST['Ajouter'])){
+                        stockAdmin($_POST['id'],$_POST['mdp']);
+                    }
                 verifAdmin($_POST['id'],$_POST['mdp']);
                 }
             
